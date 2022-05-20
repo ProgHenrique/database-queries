@@ -24,6 +24,9 @@ export class User {
   @Column()
   email: string;
 
+  @Column()
+  orders: [];
+
   @ManyToMany(() => Game, (game) => game.users)
   @JoinTable()
   games: Game[];
